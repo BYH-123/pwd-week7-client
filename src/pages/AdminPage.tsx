@@ -108,6 +108,7 @@ function AdminPage() {
     onSuccess: () => {
       toast.success('생성 완료');
       queryClient.invalidateQueries({ queryKey: ['restaurants'] });
+      queryClient.invalidateQueries({ queryKey: ['popular-restaurants'] });
       reset();
     },
   });

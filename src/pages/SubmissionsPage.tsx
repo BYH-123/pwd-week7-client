@@ -86,6 +86,7 @@ function SubmissionsPage() {
       toast.success('승인하여 레스토랑에 등록했습니다.');
       queryClient.invalidateQueries({ queryKey: ['submissions'] });
       queryClient.invalidateQueries({ queryKey: ['restaurants'] });
+      queryClient.invalidateQueries({ queryKey: ['popular-restaurants'] });
     }
   });
 
